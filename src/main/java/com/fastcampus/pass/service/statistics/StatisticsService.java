@@ -11,6 +11,7 @@ import java.util.List;
 
 @Service
 public class StatisticsService {
+    // Test 파일 작성시 mock 대체가 가능한 부분
     private final StatisticsRepository statisticsRepository;
 
     public StatisticsService(StatisticsRepository statisticsRepository) {
