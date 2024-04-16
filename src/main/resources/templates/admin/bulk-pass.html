@@ -36,7 +36,7 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr th:each="bulkPass : ${bulkPasses}" th:classappend="${bulkPass.getStatus().name() == 'COMPLETED' ? 'table-active' : ''}">
+                                        <tr th:each="bulkPass : ${bulkPasses}" th:classappend="${bulkPass.getStatus() == 'COMPLETED' ? 'table-active' : ''}">
                                             <td th:text="${bulkPass.getUserGroupId()}"></td>
                                             <td th:if="${bulkPass.getStatus().name() == 'COMPLETED'}">지급 완료</td>
                                             <td th:unless="${bulkPass.getStatus().name() == 'COMPLETED'}">지급 전</td>
@@ -56,7 +56,7 @@
                                 <h6 class="m-0 font-weight-bold text-primary">이용권 일괄 지급 등록</h6>
                             </div>
                             <div class="card-body">
-                                <form action="#" th:action="@{/admin/bulk-pass}" th:object="${request}" method="post">
+                                <form actiono="#" th:action="@{/admin/bulk-pass}" th:object="${request}" method="post">
                                     <div class="small mb-1">패키지</div>
                                     <select class="form-control mb-3" th:field="*{packageSeq}">
                                         <option value="">등록된 패키지를 선택해주세요.</option>

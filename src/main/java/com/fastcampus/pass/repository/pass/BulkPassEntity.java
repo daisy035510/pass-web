@@ -33,7 +33,6 @@ public class BulkPassEntity {
 
         }
         this.endedAt = this.startedAt.plusDays(period);
-
     }
 
     public void setEndedAt(LocalDateTime endedAt) {

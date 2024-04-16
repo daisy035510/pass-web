@@ -11,11 +11,11 @@ import java.time.LocalDateTime;
 @Setter
 @ToString
 public class BulkPassRequest {
+
     private Integer packageSeq;
     private String userGroupId;
     private LocalDateTime startedAt;
     public void setStartedAt(String startedAtString) {
         this.startedAt = LocalDateTimeUtils.parse(startedAtString);
-
     }
 }
